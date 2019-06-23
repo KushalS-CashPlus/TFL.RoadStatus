@@ -10,9 +10,25 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Moq" Version="4.12.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="UnitTest1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TFL.RoadStatus\TFL.RoadStatus.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Queries\" />
+    <Folder Include="TestData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="TestData\A2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\A2,A406.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

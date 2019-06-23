@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TFL.RoadStatus.Factories;
 using TFL.RoadStatus.Models;
 
