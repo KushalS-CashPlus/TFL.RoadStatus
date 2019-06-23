@@ -26,6 +26,7 @@ namespace TFL.RoadStatus
                         })
                         .ConfigureServices((hostContext, services) =>
                         {
+                            services.Configure<ConsoleLifetimeOptions>(options => options.SuppressStatusMessages = true);
                             services.AddScoped<IRoadStatusQuery, RoadStatusQuery>();
                             services.AddScoped<IRoadStatusService, RoadStatusService>();
                             services.AddSingleton<ITflHttpClientFactory, TflHttpClientFactory>();
