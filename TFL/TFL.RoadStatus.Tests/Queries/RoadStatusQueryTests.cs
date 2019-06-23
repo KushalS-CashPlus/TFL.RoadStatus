@@ -35,7 +35,7 @@ namespace TFL.RoadStatus.Tests.Queries
         [Theory]
         [InlineData("A2", 1)]
         [InlineData("A2,A406", 2)]
-        public async Task SHOULD_return_data_WHEN_valid_road_is_provided(string road, int resultCount)
+        public async Task SHOULD_return_data_WHEN_valid_road_is_provided(string road, int expectedCount)
         {
             // Arrange
             var responseContent = GetRoadStatusTestData(road);
@@ -48,7 +48,7 @@ namespace TFL.RoadStatus.Tests.Queries
 
             // Assert
             Assert.NotNull(actualResult);
-            Assert.Equal(resultCount, actualResult.Count);
+            Assert.Equal(expectedCount, actualResult.Count);
             tflHttpClientFactory.Verify(x => x.Create(), Times.Once);
         }
 
