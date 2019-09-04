@@ -31,7 +31,6 @@ You can get the exit code by typing `echo $?` where 0 Represents no errors
 - When no road names are provided and then we will print all roads, with their statuses, that are available by the request `https://api.tfl.gov.uk/road/`
 
 ### Practices
-- Commands Queries Releation Segragation (CQRS)
 - TDD - Using XUnit, and Moq
 
 ## Getting started
